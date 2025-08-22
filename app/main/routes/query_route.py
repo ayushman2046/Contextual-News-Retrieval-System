@@ -8,7 +8,7 @@ query_router = Blueprint('query', __name__)
 
 @query_router.route("/", methods=["POST"])
 def analyze_query():
-    # 1. Get the request body data (equivalent to FastAPI's Pydantic model)
+    # 1. Get the request body data
     try:
         query_data = request.get_json()
         query_text = query_data.get("query")
